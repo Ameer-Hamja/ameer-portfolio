@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -6,14 +11,18 @@
 }
 
 body {
-    background-color: #f4f6f8;
-    color: #333;
+    background-color: #f8fafc;
+    color: #0f172a;
+    line-height: 1.6;
 }
+
 
 /* Navbar */
 header {
-    background-color: #111;
-    padding: 15px 40px;
+    background-color: #0f172a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav {
@@ -23,41 +32,33 @@ nav {
 }
 
 .logo {
-    color: #00adb5;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
+    color: #2563eb;
+    font-weight: bold;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
+    color: #e5e7eb;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #00adb5;
+    color: #2563eb;
 }
+
 
 /* Home */
 .home {
     text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(to right, #00adb5, #007b83);
-    color: #fff;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #f8fafc;
 }
 
 .home h1 span {
-    color: #222;
-    background: #fff;
-    padding: 0 8px;
+    color: #2563eb;
+    background: none;
 }
+
 
 .home p {
     max-width: 600px;
@@ -68,16 +69,20 @@ nav ul li a:hover {
 .btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 10px 20px;
-    background: #111;
-    color: #fff;
+    padding: 12px 24px;
+    background: #2563eb;
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .btn:hover {
-    background: #00adb5;
+    background: #1d4ed8;
+    transform: translateY(-2px);
 }
+
 
 /* Sections */
 .section {
@@ -99,11 +104,18 @@ nav ul li a:hover {
 }
 
 .skill-box {
-    background: #fff;
+    background: #ffffff;
     padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.skill-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
 
 /* Project */
 .project-card {
